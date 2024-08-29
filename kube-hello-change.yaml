@@ -27,8 +27,8 @@ spec:
         app: hello-python
     spec:
       containers:
-      - name: flask-change
-        image: flask-change:latest
+      - name: flask-app
+        image: changeapp:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 8080

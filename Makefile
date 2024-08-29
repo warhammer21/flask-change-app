@@ -14,6 +14,14 @@ build:
 
 run:
 	docker run -p 8080:8080 changeapp:v1
+# Authenticate Docker with GCR
+gcr-auth:
+	gcloud auth configure-docker
+
+# Push the Docker image to Google Container Registry (GCR)
+push: gcr-auth
+	docker tag changeapp:v1 us-central1-docker.pkg.dev/qwiklabs-gcp-00-14c2c59445db/flasktestregis/changeapp:v1
+	docker push us-central1-docker.pkg.dev/qwiklabs-gcp-00-14c2c59445db/flasktestregis/changeapp:v1
 
 invoke:
 	curl http://127.0.0.1:8080/change/1/34
