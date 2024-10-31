@@ -33,6 +33,10 @@ async def divide(num1: int, num2: int):
     total = num1 / num2
     return {"result": total}
 
+@app.get("/reminder/{num1}/{num2}")
+async def reminder(num1: int, num2: int):
+    reminder = num1 % num2
+    return {"result":reminder}
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8000, host="0.0.0.0")

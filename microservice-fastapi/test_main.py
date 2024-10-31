@@ -35,3 +35,7 @@ def test_divide(client):
     response = client.get("/divide/1/2")
     assert response.status_code == 200
     assert response.json() == {"result": 0.5}
+def test_reminder(client):
+    response = client.get("/reminder/4/2")
+    assert response.status_code == 200
+    assert response.json() == {"result": 0}
