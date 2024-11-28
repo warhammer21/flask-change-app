@@ -18,8 +18,8 @@ class Token(BaseModel):
 # Simulated "database" with pre-hashed password
 fake_users_db = {
     "testuser": {
-        "username": "shreyak",
-        "full_name": "shreyak_vashisht",
+        "username": "testuser",
+        "full_name": "Test User",
         "email": "testuser@example.com",
         "hashed_password": "$2b$12$.vEbzZNXTNXInEr8epig1e5NoaoR/bmbPaymbMnIf/ccE31kZSyfi",  # Hashed for "testpassword"
         "disabled": False,
